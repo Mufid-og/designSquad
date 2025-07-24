@@ -56,12 +56,10 @@ submitEl.addEventListener("click", () => {
         const umurNon = 72;
         const umurPerokok = umurNon - tahunUtuh;
         let visualSelisih = tahunUtuh;
-        console.log(tahunUtuh)
 
         if (visualSelisih < 15) {
             visualSelisih *= 2; // perbesar efeknya
         }
-        console.log(visualSelisih)
 
         const adjustedPerokok = umurNon - visualSelisih;
         let perokokWidth = bulatKeBawah10((adjustedPerokok / umurNon) * 100) - 10;
