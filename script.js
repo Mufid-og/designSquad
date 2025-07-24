@@ -1,5 +1,7 @@
 // sumber akumulasi usia perokok
 // https://www.theguardian.com/society/2024/dec/30/single-cigarette-takes-20-minutes-off-life-expectancy-study
+// sumber harapan hidup penduduk indonesia
+// https://ayosehat.kemkes.go.id/usia-harapan-hidup-penduduk-di-indonesia-meningkat-bagaimana-cara-hidup-panjang-dengan-sehat-dan-sejahtera
 
 let step = 1;
 let batang = 0;
@@ -51,7 +53,7 @@ submitEl.addEventListener("click", () => {
         kalkulator.classList.remove("hidden");
 
 
-        const umurNon = 70;
+        const umurNon = 72;
         const umurPerokok = umurNon - tahunUtuh;
         let visualSelisih = tahunUtuh;
         console.log(tahunUtuh)
