@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth overflow-x-hidden">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Squad</title>
+    <link rel="icon" href="assets/logo.png" type="image/png">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-[#001c30] overflow-x-hidden">
+    <div class="relative flex flex-col items-center min-h-screen w-full mt-[3rem]">
+        <img src="assets/clock.png" alt="" class="h-[5rem] w-[5rem]">
+        <h1 class="text-[#dafffb] text-4xl font-bold w-[60%] text-center mb-[3rem]">Pernahkah kamu menghitung waktu yang
+            terlewat?</h1>
+        <h2 class="text-[#ffc39d] w-[60%] font-bold text-center">Gunakan kalkulator ini untuk memahami dampak kecil yang
+            terus bertambah — satu batang dalam satu hari, satu waktu dalam hidup.</h2>
+        <a href="#kalkulator" class="absolute bottom-[5rem]">
+            <img src="assets/arrow.png" alt="" class="h-[2rem]">
+        </a>
+    </div>
+    <div id="kalkulator" class="relative flex flex-col items-center min-h-screen overflow-hidden">
+        <div class="flex flex-col items-center z-10 mt-[3.5rem]">
+            <img src="assets/logo.png" alt="" class="w-[3rem] h-[3rem]">
+            <h1 class="text-[#64ccc5] text-6xl font-bold">Rokok dan Waktu</h1>
+            <h3 class="text-[#ffc39d] text-2xl font-semibold tracking-[.1rem]">"Lebih dari sekedar kebiasaan"</h3>
+        </div>
+        <div class="relative flex  flex-col z-10 mt-[5rem]">
+            <input id="input" type="number" class="w-[17rem] p-3 rounded-lg text-black text-center bg-[#fff5eb] mb-4"
+                placeholder="Berapa batang perhari?">
+            <button id="submit"
+                class="bg-[#ff6f61] text-white font-semibold px-6 py-2 rounded-md absolute -bottom-10 left-[35%]">Kirim</button>
+        </div>
+        <img src="assets/awan.png" alt="" class="absolute h-[30rem] -left-[15rem] bottom-0 z-0">
+        <img src="assets/awan.png" alt="" class="absolute h-[30rem] -right-[15rem] bottom-0 z-0 transform scale-x-[-1]">
+    </div>
+    <div id="grafik" class="relative text-center flex flex-col items-center justify-center min-h-screen">
+        <h1 id="resultTime" class="text-4xl font-bold text-[#fbbf95] mb-10"></h1>
+
+        <h2 class="relative right-[10.6rem] font-semibold text-[#dafffb] mb-6">Harapan hidup</h2>
+
+        <div class="flex flex-col gap-4 w-full max-w-md border-l-[2px] border-[#176b87] pl-4">
+            <!-- Bar Perokok -->
+            <div class="flex items-center gap-2">
+                <div class="w-28 text-left text-[#dafffb]">Perokok</div>
+                <div class="flex-1 flex items-center gap-2">
+                    <div id="bar-perokok" style="width: 0%;"
+                        class="h-12 bg-[#176b87] rounded-lg flex items-center justify-end pr-4 transition-all duration-[2s]">
+                        <span class="text-xl font-bold" id="perokok-txt"></span>
+                    </div>
+                    <span class="text-sm text-[#dafffb] font-semibold">Tahun</span>
+                </div>
+            </div>
+
+            <!-- Bar Non-perokok -->
+            <div class="flex items-center gap-2">
+                <div class="w-28 text-left text-[#dafffb]">Non-perokok</div>
+                <div class="flex-1 flex items-center gap-2">
+                    <div id="bar-non" style="width: 0%;"
+                        class="h-12 bg-[#176b87] rounded-lg flex items-center justify-end pr-4 transition-all duration-[1.5s]">
+                        <span class="text-xl font-bold" id="non-txt"></span>
+                    </div>
+                    <span class="text-sm text-[#dafffb] font-semibold">Tahun</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="resultBox" class="flex flex-col mt-5">
+            <p id="result" class="text-[#dafffb] text-sm">Anda telah kehilangan sekitar <span id="resultSpan"
+                    class="text-[#ffc39d]">3
+                    tahun 142 hari</span> dari harapan hidup. 😔</p>
+        </div>
+
+        <p class="text-xs text-[#ffc39d] font-semibold mt-10 max-w-lg leading-relaxed">
+            Estimasi ini mengacu pada studi dari <a href="https://www.theguardian.com/society/2024/dec/30/single-cigarette-takes-20-minutes-off-life-expectancy-study" class="text-[#64ccc5]">University College London</a> (2024)
+            yang menyatakan bahwa satu batang
+            rokok dapat mengurangi harapan hidup hingga 20 menit.
+        </p>
+
+        <a id="solusiBtn" href="https://ayosehat.kemkes.go.id/masih-kecanduan-merokok-simak-tips-berhenti-merokok-berikut" class="fixed right-5 bottom-5 bg-teal-400 text-[#001f2f] px-6 py-2 mt-8 rounded-full font-semibold hover:bg-teal-300 
+    transform transition duration-[1.5s] translate-x-full opacity-0">
+            Cara Berhenti
+        </a>
+    </div>
+    <div class="flex justify-center items-center min-h-screen">
+        <p class="text-[#ffc39d] w-[53%] text-center font-bold">“Rata-rata perokok yang tidak berhenti kehilangan
+            sekitar satu dekade kehidupan. Itu berarti 10 tahun penuh
+            momen, waktu, dan kenangan bersama orang tercinta.”
+            — Dr. Sarah Jackson, University College London</p>
+    </div>
+    <!-- <div class="flex flex-col items-center">
+        <div class="flex">
+            <input id="input" type="number" class="bg-white" placeholder="Berapa batang perhari?">
+            <button id="submit" class="bg-blue-300">Kirim</button>
+        </div>
+    </div>
+    <div id="resultBox" class="flex flex-col hidden">
+        <p id="result" class="text-white">anda meninggal ngga lama lagi </p>
+        <button onclick="window.location.reload()" class="bg-white w-auto">Hitung ulang</button>
+    </div> -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>
